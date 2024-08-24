@@ -1,0 +1,42 @@
+.parent {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  background-color: #eee;
+  line-height: 1.7;
+  padding: 20px;
+  /* ==================== */
+  counter-increment: test;
+  /* ==================== */
+  position: relative;
+}
+
+.parent div::after {
+  /* =================== */
+  content: counter(test);
+  /* =================== */
+
+  background-color: #07e07f;
+  height: 30px;
+  padding: 0 5px;
+  position: absolute;
+  right: -6px;
+  border-radius: 50px;
+  top: 50%;
+  margin-top: -15px;
+}
+
+.parent div::before {
+  /* ==================== */
+  content: attr(data-text);
+  /* ==================== */
+  background-color: #07e07f;
+  padding: 5px;
+  display: block;
+  transition: .2s ease-in-out;
+  text-align: center;
+  opacity: 0;
+}
+
+.parent:hover  div::before {
+  opacity: 1;
+}

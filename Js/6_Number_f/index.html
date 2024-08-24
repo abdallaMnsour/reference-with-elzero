@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Number Methods
+          Two Dots To Call A Methods
+          toString()
+          toFixed()
+          parseInt()
+          parseFloat()
+          Number.isInteger() [ES6]
+          Number.isNaN() [ES6]
+      */
+
+      console.log((100).toString()); // 100
+      console.log((100.5).toString()); // 100.5
+      console.log((100.444444).toFixed(2)); // 100.44
+      console.log((100.555555).toFixed(2)); // 100.56 اقرب عدد صحيح
+
+      console.log(+"100 years old"); // NaN
+      console.log(Number("100 years old")); // NaN
+      console.log(parseInt("22.3 years old")); // 22
+      console.log(parseFloat("22.3 years old")); // 22.3
+
+      console.log(Number.isInteger("100")); // false
+      console.log(Number.isInteger(100.5)); // false
+      console.log(Number.isInteger(100)); // true
+
+      console.log(Number.isNaN("abdalla")); // false
+      console.log(Number.isNaN(+"abdalla")); // true
+    </script>
+  </body>
+</html>

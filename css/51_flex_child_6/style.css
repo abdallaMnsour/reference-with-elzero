@@ -1,0 +1,54 @@
+.flex, .flex-basis {
+  display: inline-flex;
+  background-color: #ddd;
+  padding: 10px;
+  margin-top: 10px;
+  height: 300px;
+  width: 300px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flex-basis {
+  align-items: flex-start;
+}
+
+.flex {
+  flex-direction: column;
+}
+
+.flex div, .flex-basis div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b86c5;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  width: 60px;
+  height: 40px;
+  margin: 1px;
+}
+
+.three {
+  /* ============================ */
+  /*
+    بيحترم الارتفاع 
+    height و ال width الفرق بينه و بين ال
+    width يعمل ك row انه اذا كان اتجاه الصفحه
+    height يعمل ك column انه اذا كان اتجاه الصفحه
+  */
+  flex-basis: 300px;
+  /*
+    هو اختصار للقيم الاتيه
+    flex-grow, flex-shrink, flex-basis
+    القيم الاتيه هي الافتراضيه علي كلام الزيرو
+  */
+  flex: 0 1 auto;
+  flex: 5 5 900px;
+  /* ============================ */
+}
+
+span.in {display: inline-block;}

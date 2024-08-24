@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      name="user-test"
+      title="username"
+      class="name"
+      id="un"
+      data-text="num"
+    >
+      abdalla mansour
+    </div>
+    <script>
+      /*
+        attributes => show all attr
+        hasAttribute() => bool
+        hasAttributes() => bool
+        removeAttribute()
+      */
+      let myDiv = document.getElementById("un");
+
+      console.log(myDiv.attributes);
+      console.log(myDiv.hasAttribute("name"));
+      console.log(myDiv.hasAttributes());
+      console.log(myDiv.removeAttribute("data-text"));
+    </script>
+  </body>
+</html>

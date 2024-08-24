@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 3000px;
+      width: 3000px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    /*
+      stop() وقف تحميل الصفحه
+      focus() ركز علي الويندو
+      print() || ctrl + p 
+      scrollTo(x, y || {}) => اذهب الي هذه القيمه
+      scroll(x, y || {}) مثل الاولي لكن لاتدعم متصفح الماك
+      scrollBy(x, y) => اضف علي الاسكرول
+    */
+
+    let newWindow = open("../56_bom_history/index.html", "", "width=200,height=200");
+
+    newWindow.focus()
+    newWindow.close()
+
+    scrollTo({
+      left: 500,
+      top: 500,
+      behavior: "smooth"
+    })
+
+    scrollBy(500, 500)
+
+    scrollBy({
+      left: 500,
+      top: 500,
+      behavior: "smooth"
+    })
+  </script>
+</body>
+</html>

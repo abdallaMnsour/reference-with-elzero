@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+    <script>
+      let myNames = ["abdalla", "ali", "gamal", "osama", "ahmed", "mahmod"];
+
+      let filter = myNames.filter(function (val, index, arr) {
+        console.log(val.split("")[0]);
+        console.log(index);
+        console.log(arr);
+        console.log(`${this}`);
+        console.log("-------------------------");
+
+        // مش بترجعه false و بترجعه و ال true انها بتشوف ال map الفرق بينها و بين ال
+
+        return val.toUpperCase().startsWith("A");
+      }, 10);
+
+      let map = myNames.map(function (val, index, arr) {
+        console.log(val.split("")[0]);
+        console.log(index);
+        console.log(arr);
+        console.log(parseInt(`${this}`));
+        console.log("-------------------------");
+
+        return val.split("")[0];
+      }, 10);
+
+      console.log(filter);
+    </script>
+  </body>
+</html>
+
+<!-- 7 : 10 : ?? -->
+<!-- 6 : 59 : 47 -->

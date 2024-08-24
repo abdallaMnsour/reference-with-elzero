@@ -1,0 +1,57 @@
+* {margin: 0;padding: 0;color: white;}
+
+/* 
+  1 - [perspective] in .container
+  2 - [transform-style, transform-origin] in .box
+  3 - [transform] in :hover
+  4 - [backface-visibility: hidden] in .face
+  5 - [transform: rotateY(180deg)] in .back
+*/
+
+.container {
+  width: 200px;
+  margin: 30px auto;
+
+  /* ========================= */
+  perspective: 500px;
+}
+
+.box {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  transition: 1s;
+
+  /* ========================== */
+  /* 3d لحفظ مكانه في ال */
+  transform-style: preserve-3d;
+  transform-origin: right;
+}
+
+.container:hover .box {
+  transform: rotateY(-180deg) translateX(100%);
+}
+
+
+.box .face {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* ========================= */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: #0fa;
+}
+
+.back {
+  /* ========================== */
+  transform: rotateY(180deg);
+  background-color: #0af;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      /*
+        Set => can store any data values
+        WeakSet => collection of objects only
+
+        Set => have size property
+        WeakSet => does not have size property
+
+        Set => have keys, values, entries
+        WeakSet => does not have clear, keys, values and entries
+
+        Set => can use forEach
+        WeakSet => cannot use forEach
+      */
+
+      let mySet = new Set([1, 1, 1, 2, 3, "A", "A"])
+
+      let iter = mySet.keys();
+
+      console.log(iter);
+
+      console.log(iter.next().value);
+      console.log(iter.next().value);
+      console.log(iter.next().value);
+      console.log(iter.next().value);
+      console.log(iter.next().done); // done true
+      console.log("############");
+
+      // بتاخذ اوبجيكت بس
+      let myWeakSet = new WeakSet([{ name: "abdalla", age: 22 }]);
+
+      console.log(myWeakSet);
+    </script>
+  </body>
+</html>
+<!-- 2 : 28 -->

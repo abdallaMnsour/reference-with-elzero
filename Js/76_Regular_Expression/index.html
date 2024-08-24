@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      Regular Expression
+      Character Classes
+      . => matches any character
+      \w => match word character [a-z, A-Z, 0-9, Underscore _]
+      \W => match Non word characters
+      \d => match digits from 0 to 9
+      \D => match non-digit characters
+      \s => match whitespace character
+      \S => match non whitespace character
+    */
+
+    let emails = "bodemansour8@gmail.com o@gmail.com o@o.com bode@nn.org";
+
+    let valid = /\w@\w.com/g;
+
+    console.log(emails.match(valid));
+  </script>
+</body>
+</html>

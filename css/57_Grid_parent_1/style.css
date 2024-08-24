@@ -1,0 +1,35 @@
+/* 
+  Grid
+    Parent
+      display: grid | inline-grid;
+      grid-template-columns: -> [Number of columns in] -> [px, %, auto, fraction, repeat(), mix]
+*/
+
+.parent {
+  color: white;
+  background-color: #808080;
+  border-radius: 5px;
+  margin: auto;
+  padding: 1px;
+  width: 500px;
+  /* ==================================== */
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, 1fr);
+  /* 
+    fraction و ال auto الفرق بين ال
+    طماع او جريء fraction خجول و ال auto ال
+  */
+  grid-template-columns: repeat(2, auto) repeat(2, 1fr) 50px;
+  /* ==================================== */
+}
+
+.parent div {
+  text-align: center;
+  background-color: #fa0;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 1px;
+}

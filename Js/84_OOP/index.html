@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class User {
+        constructor(id, username, salary) {
+          // this is property
+          this.i = id;
+          this.u = username || "Unknown";
+          this.s = salary < 4000 ? salary + 500 : salary;
+          this.func = function () {
+            return `hello ${this.u}, you'r salary is ${this.s}`;
+          }
+        }
+        // this is method
+        methodFunc() {
+          return `hello ${this.u}, you'r salary is ${this.s}`;
+        } 
+      }
+
+      let userOne = new User(100, "abdalla", 5000)
+      let userTwo = new User(101, "", 3000)
+
+      console.log(userOne.methodFunc());
+      console.log(userTwo.methodFunc());
+    </script>
+  </body>
+</html>

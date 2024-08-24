@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"],
+        zero = 0,
+        counter = 3;
+
+      my.pop();
+      my.pop();
+      my.reverse();
+
+      document.write(my);
+
+      document.write(my.slice(my.indexOf("Elham"), counter));
+
+      let el = my[my.indexOf("Elham")].slice(zero, -counter);
+      let ze = my[my.indexOf("Mazero")].slice(
+        my[my.indexOf("Mazero")].indexOf("z")
+      );
+
+      document.write(el + ze);
+
+      let ro = my[my.indexOf("Mazero")].slice(
+        my[my.indexOf("Mazero")].indexOf("r")
+      );
+      let o = my[my.indexOf("Mazero")]
+        .slice(my[my.indexOf("Mazero")].indexOf("o"))
+        .toUpperCase();
+
+      document.write(ro[zero] + o);
+
+      // let Zero = 0;
+      // let counter = 3;
+      // let my = ["Ahmed","Mazero","Elham","Osama","Gamal","Ameer"];
+      // console.log(my.slice(Zero,++counter).reverse());
+      // console.log(my.slice(++Zero,-(--counter)).reverse());
+      // console.log(my[--counter].slice(--Zero,counter)+my[++Zero].slice(counter))
+      // console.log(my[Zero].slice(-counter,-Zero)+(my[Zero].slice(-(--counter))).toUpperCase())
+
+
+      // let zero = 0;
+      // let counter = 3;
+      // let my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
+      // Variables zero and counter They change every time
+
+      // console.log(my.slice(zero,++counter).reverse());
+      // console.log(my.slice(++zero,--counter).sort());
+      // console.log(my[--counter].slice(--zero,counter).concat(my[++zero].slice(counter)));
+      // console.log(my[zero][++counter + zero].concat(my[counter][--zero].toUpperCase()));
+    </script>
+  </body>
+</html>
+
+
+<!-- 4 : 31 : 38 -->

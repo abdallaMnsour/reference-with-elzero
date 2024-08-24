@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        static
+          الاوبجكت اللي اتنشأ مينفعش يأكسس علي القيمه دي لكن الكلاس ينفع
+      */
+
+      class User {
+        static count = 0;
+        constructor(id, username, salary) {
+          this.i = id;
+          this.n = username;
+          this.s = salary;
+          User.count++;
+        }
+
+        static printCount() {
+          return `${this.count} is you'r count`;
+        }
+
+        method() {
+          return `hello from method`;
+        }
+        static staticMethod() {
+          return `hello from static method`;
+        }
+      }
+
+      let userOne = new User(100, "abdalla", 5000);
+      let userTwo = new User(100, "abdalla", 5000);
+
+      console.log(userOne.method());
+      // console.log(userOne.staticMethod()); // error
+      console.log(User.staticMethod());
+      // console.log(User.method()); // error
+
+      console.log(User.printCount());
+    </script>
+  </body>
+</html>
+<!-- 04 : 56 : 11 -->

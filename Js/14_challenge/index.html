@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let job = "support";
+      let salary = 4e3;
+
+      switch (job) {
+        case "manager":
+          salary = 8e3;
+          break;
+        case "it":
+        case "support":
+          salary = 6e3;
+          break;
+        case "developer":
+        case "designer":
+          salary = 7e3;
+      }
+
+      document.write(salary);
+
+      let holidays = 5;
+      let money = 0;
+
+      switch (holidays) {
+        case 0:
+          money = 5e3;
+          break;
+        case 1:
+        case 2:
+          money = 3e3;
+          break;
+        case 3:
+          money = 2e3;
+          break;
+        case 4:
+          money = 1e3;
+      }
+
+      document.write(`Your money is ${money}`);
+    </script>
+  </body>
+</html>

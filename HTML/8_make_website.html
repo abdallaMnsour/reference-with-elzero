@@ -1,0 +1,462 @@
+<!-- 
+    Debrecated Elements in HTML5
+        acronym     => abbr
+        applet      => object
+        basefont    => css
+        big         => css
+        center      => css
+        dir         => ul or ol
+        font        => css
+        frameset    => 
+        strike      => css
+        tt          => css
+
+    New In HTML5
+        header
+        nav
+        main
+        footer
+        article
+        section
+        aside
+        progress
+        meter
+        details
+        wbr
+        figure
+        figcaption
+        time
+        dialog , has attr open
+        bdi , عزل اتجاه النص العربي
+        output | <form oninput>
+        audio
+        video
+        input => color
+        input => number
+        input => range
+        input => email
+        input => search
+        input => url
+        input => tel
+        input => time
+        input => date
+        input => datetime-local
+        input => datetime
+        input => month
+        input => week
+        input => autocomplete=off
+        input => autofocus
+        input => required
+        form => novalidate
+        input => formmethod [get, post]
+        input => formaction [المسار]
+        input => formtarget [_blank]
+        input => formnovalidate
+        input => multiple [it can be used with file and email]
+        input => min
+        input => max
+        input => step
+        input => pattern
+        input => disabled
+        input => readonly
+        search codePen canvas
+
+    Others You Need To Know
+        fieldset
+        legend
+        &lt; == "<"
+        &gt; == ">"
+        &copy; == "(c)"
+        iframe
+        colspan -> تدمج الصفوف
+        rowspan -> تدمج الاعمده
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="8_make_website.css">
+    <link rel="stylesheet" href="typing-reload.css">
+    <!--[if lt IE 9]>
+        <script src="html5shiv.min.js"></script>
+    <![endif]-->
+    <title>HTML5</title>
+</head>
+<body>
+    <!-- Start Header -->
+
+    <header class="main">
+        <h1>HTML5 Course</h1>
+    </header>
+
+    <!-- End Header -->
+
+    <!-- Start Navigation -->
+
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact Us</li>
+            <i class="clear" style="display: block;"></i>
+        </ul>
+    </nav>
+    
+    <!-- End Navigation -->
+
+    <!-- Start Main -->
+
+    <main>
+        <p>Welcome To Our <span><mark>HTML5</mark> Course</span> From Elzero Wep School</p>
+    </main>
+
+    <!-- End Main -->
+
+    <!-- Start Article -->
+    <div class="post">
+        <article>
+            <header>
+                <h3>Article About &lt;progress&gt;</h3>
+                <p>Created By <span>Abdalla</span> On <time datetime="2023-2-13T9:47">2/13/2023</time></p>
+            </header>
+            <section>
+                <p>This Is Article Content Number #01</p>
+                Design : <progress value="7.5" max="10"></progress><br>
+                Coding : <progress value="56" max="100"></progress>
+            </section>
+        </article>
+
+        <article>
+            <header>
+                <h3>Article About &lt;details&gt;</h3>
+                <p>Created By <span>Abdalla</span> On <time datetime="2023-2-13T9:47">2/13/2023</time></p>
+            </header>
+            <section>
+                <p>This Is Article Content Number #02</p>
+                <p>
+                    <details style="cursor: pointer">
+                        <summary>References</summary>
+                        <ul>
+                            <li>link 1</li>
+                            <li>link 2</li>
+                            <li>link 3</li>
+                        </ul>
+                    </details>
+                </p>
+            </section>
+        </article>
+
+        <article>
+            <header>
+                <h3>Article about &lt;wbr&gt;</h3>
+                <p>Created By <span>Abdalla</span> On <time datetime="2023-2-13T9:47">2/13/2023</time></p>
+            </header>
+            <section>
+                <p>This Is Article Content Number #03</p>
+                <p class="linkElzero">
+                    <a href="#">
+                        https://<wbr>www.elzero.org</wbr><wbr>/users<wbr>?id=54</wbr><wbr>&username=abdalla</wbr></wbr>
+                    </a>
+                </p>
+            </section>
+        </article>
+
+        <article>
+            <header>
+                <h3>Article about &lt;figure&gt;</h3>
+                <p>Created By <span>Abdalla</span> On <time datetime="2023-2-13T9:47">2/13/2023</time></p>
+            </header>
+            <section>
+                <p>this code describe the div sentax</p>
+                <figure class="figure-code">
+                    <figcaption>This Is Code Sentax 2-6</figcaption>
+                    <code>
+                        &lt;div&gt;this is normal sentax for div&lt;/div&gt;
+                    </code>
+                </figure>
+            </section>
+        </article>
+
+        <article>
+            <header>
+                <h3>Article About Using Code Inside &lt;figure&gt; and &lt;dialog&gt;</h3>
+                <p>Created By <span>Abdalla</span> On <time datetime="2023-2-13T9:47">2/13/2023</time></p>
+            </header>
+            <section>
+                <p>this code describe the image inside figure</p>
+                <dialog open>Dialog</dialog>
+                <figure class="figure-img">
+                    <img src="Colorful_1.png" alt="Colorful">
+                    <img src="cat.png" alt="Colorful">
+                    <img src="Colorful_2.png" alt="Colorful">
+                    <figcaption>Three Images Contain Animals See The Full List <a href="#">Here</a></figcaption>
+                </figure>
+            </section>
+        </article>
+
+        <article>
+            <header>
+                <h3>Article About Using &lt;video&gt;</h3>
+                <p>Created By <span>Abdalla</span> On <time datetime="2023-2-13T9:47">2/13/2023</time></p>
+            </header>
+            <section>
+                <p>This is HTML5 video</p>
+                <video src="كم سهرنا من ليالي .mp4" controls loop muted  preload="auto" poster="cat.png">
+                    <source src="كم سهرنا من ليالي .mp4" type="video/mp4">
+                    <source src="كم سهرنا من ليالي .ogg" type="video/ogg">
+                    <source src="كم سهرنا من ليالي .webm" type="video/webm">
+                    <!-- track use to translate -->
+                    <track src="..." kind="metadata" srclang="en" lang="English">
+                    Ops your browser does not support video technology
+                </video>
+            </section>
+        </article>
+
+        <article>
+            <header>
+                <h3>Article About Using New Fields Inside &lt;fieldset&gt; and &lt;form&gt;</h3>
+                <p>Created By <span>Abdalla</span> On <time datetime="2023-2-13T9:47">2/13/2023</time></p>
+            </header>
+            <section class="fields">
+                <fieldset>
+                    <legend>New input fields</legend>
+                    <!-- New fields -->
+                    <form><br>
+                        <input type=color name=color value=#0073fa>
+                        <input type=range name=range min=0 max=100 step=5 value=34>
+                        <input type=number min=-10 max=20 value=10>
+                        <br><hr><br>
+                        <input type="email" name="email" placeholder="E-Mail">
+                        <input type="search" name="search" placeholder="Search">
+                        <input type="url" name="url" placeholder="Url">
+                        <input type="tel" name="tel" placeholder="Telephone">
+                        <br><hr><br>
+                        <label for="time">time</label>
+                        <input type="time" id="time" name="time">
+
+                        <label for="date">date</label>
+                        <input type="date" id="date" name="date">
+
+                        <label for="datetime-local">datetime local</label>
+                        <input type="datetime-local" id="datetime-local" name="datetime-local">
+
+                        <label for="datetime">datetime</label>
+                        <input type="datetime" id="datetime" name="datetime">
+
+                        <label for="month">month</label>
+                        <input type="month" id="month" name="month">
+
+                        <label for="week">week</label>
+                        <input type="week" id="week" name="week"><br>
+
+                        <input type="submit">
+                    </form>
+                    
+                    <br><hr><br>
+                    <legend>attr [ novalidate, autocomplete, disabled ]</legend>
+                    <!-- novalidate اذا كان المستخدم ادخل حقول خاطئه, تخطي الخطأ -->
+                    <form novalidate>
+                        <input type="text" name=username placeholder=username>
+                        <!-- autocomplete قم بمنع ظهور الحقول المكتوبه مسبقاً -->
+                        <input type="email" name=email placeholder="E-Mail" autocomplete="off">
+                        <!-- disabled امنع الكتابه في الحقل -->
+                        <input type="password" name=password value="abdalla mansour" disabled>
+                        <input type="submit" value="submit">
+                    </form>
+                    
+                    <br><hr><br>
+                    <legend>attr [ formaction formmethod enctype]</legend>
+                    <!-- التشفير
+                        application/x-www-form-urlencoded الافتراضي 
+                        multipart/form-data تستخدم عند نقل ملفات علي السيرفر كي لا يتم تشفيره
+                        text/plain 
+                    -->
+                    <form action=7_support.html method=get enctype="">
+                        <input type=text name=name placeholder=username>
+                        <input type=email name=email placeholder=E-Mail>
+                        <input type=submit src="cat.png" width="90" value="get submit">
+                        <!-- get او post هذا الزر مختلف حيث يرسل الي صفحه مختلفه مع سلوك -->
+                        <!-- فقط <input type=image> و <input type=submit> و غيره مع formaction تعمل  ميزه -->
+                        <input type=submit value="post submit" formaction="" formmethod=post>
+                    </form>
+
+                    <br><hr><br>
+                    <legend>attr [ formnovalidate formtarget ]</legend>
+                    <form id=form-data action=7_support.html >
+                        <input type=text name=name placeholder=username>
+                        <input type=email name=email placeholder=E-Mail>
+                        <input type=submit value="default submit">
+                        <input type=submit formnovalidate value="submit without validate">
+                        <input type=submit formnovalidate formtarget="_blank" value="submit in new window">
+                    </form>
+                    <input form="form-data" type="text" name="test_name">
+
+                    <br><hr><br>
+                    <legend>attr [ multiple ]</legend>
+                    <form>
+                        <input type="email" multiple name="gmail"> 
+                        <input type="file" multiple>
+                        <input type="submit" value="submit">
+                    </form>
+
+                    <br><hr><br>
+                    <legend>attr [min max pattern]</legend>
+                    <form>
+                        <input type="number" min="5" max="40" step="5">
+                        <label for="password">Pattern from A to Z or a to z</label>
+                        <input type="text" pattern="[A-Za-z]{6}" id="password">
+                        <input type="submit" value="submit">
+                    </form>
+                    
+                    <br><hr><br>
+                    <legend>attr [readonly disabled]</legend>
+                    <form action="">
+                        <!-- disabled ترسل الي السيرفر علي عكس ال readonly الفرق الجوهري ال ال -->
+                        <input type="text" value="This is readonly" readonly name="read">
+                        <input type="text" value="This is disabled" disabled name="dis">
+                        <input type="submit" value="submit">
+                    </form>
+                </fieldset>
+            </section>
+        </article>
+<!-- hidden range color checkbox radio button file submit -->
+        <article>
+            <header>
+                <h3>Article About reload typing club</h3>
+                <p>Created By <span>Abdalla</span> On <time datetime="2023-2-13T9:47">2/13/2023</time></p>
+            </header>
+            <section>
+                <p style="margin-bottom: 90px;">reload...</p>
+                <div class="typing-club-reload">
+                    <div class="typing-club-box"></div>
+                    <div class="typing-club-reload-shadow"></div>
+                </div>
+            </section>
+        </article>
+    </div>
+    <!-- End Article -->
+
+    <!-- Start Sidebar -->
+    <aside>
+        <section class="links">
+            <h3>Categories</h3>
+            <div class="margin-aside">
+                <ul>
+                    <li>Intro</li>
+                    <li>Semantic</li>
+                    <li>Api</li>
+                    <li>New Attributes</li>
+                    <li>Multimedia Element</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="meter">
+            <h3>Performance</h3>
+            <div class="margin-aside">
+                <!-- default min = 0 and max = 1 !!! -->
+                CPU : <meter
+                            low     = ".6"
+                            high    = ".7"
+                            optimum = ".1"
+                            value   = ".6">
+                    </meter>
+                    <small>&lt;meter&gt;</small>
+            </div>
+        </section>
+
+        <section class="bdi">
+            <h3>Top Members</h3>
+            <div class="margin-aside">
+                <ul>
+                    <li><span style="float: left;">عبدالله</span> : 100% You Are The Best</li>
+                    <li><bdi>تسنيم</bdi> : 90%</li>
+                    <li><bdi>عبدالرحمن</bdi> : 39%</li>
+                    <li><bdi>سنا</bdi> : 15%</li>
+                    <li><bdi>كريم</bdi> : 54%</li>
+                    <li><bdi>مهند</bdi> : 31%</li>
+                    <li><bdi>جمال</bdi> : 34%</li>
+                    <li><bdi>حسين</bdi> : 23%</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="poll">
+            <h3>Whats Your Best Browser ?</h3>
+            <div class="margin-aside">
+                <form action="8_make_website.html" method="get">
+                    <input name=browser list="browser">
+                    <datalist id="browser">
+                        <option value="Chrome"></option>
+                        <option value="Firefox"></option>
+                        <option value="Safari"></option>
+                        <option value="Opera"></option>
+                        <option value="Internet Explorer"></option>
+                    </datalist>
+                    <input type="submit" value="click">
+                </form>
+            </div>
+        </section>
+     
+        <section class="calculate-age">
+            <h3>Calculate your age in days</h3>
+            <div class="margin-aside">
+                <form oninput="result.value = parseFloat(age.value) * parseFloat(days.value) + ' days'">
+                    <input type="text" name=age>
+                    <input type="hidden" name=days value=365.25>
+                    <output name="result">
+                </form>
+            </div>
+        </section>
+        
+        <section class="audio">
+            <h3>Today's audio</h3>
+            <div class="margin-aside">
+                <audio controls loop preload="auto"> <!-- metadata auto none -->
+                    <!-- 
+                        لمعرفه انواع المسارات ابحث عن
+                        list of mime type
+                    -->
+                    <source src="سوف نبقى هنا _ رامي محمد Rami Mohamed _ sawf nabqa(MP3_160K).mp3" type="audio/mpeg">
+                    <source src="سوف نبقى هنا _ رامي محمد Rami Mohamed _ sawf nabqa(MP3_160K).ogg" type="audio/ogg">
+                    Your browser does not support audio  technology
+                </audio>
+            </div>
+        </section>
+    </aside>
+    <!-- End Sidebar -->
+
+    <i style="display: block" class="clear"></i>
+
+    <!-- Start Footer -->
+
+    <footer>
+        Copyright 2023 &copy; All Right Reserved
+    </footer>
+    <!-- End Footer -->
+    <script>
+        // Definition of elements
+        let img = document.getElementsByTagName("img")[2];
+        let dialog = document.getElementsByTagName("dialog")[0];
+        let img2 = document.getElementsByTagName("img")[0];
+
+        img2.onmouseenter = function () {
+            this.style.cursor = "grab";
+        }
+        img2.onmousedown = function () {
+            this.style.cursor = "grabbing";
+        }
+        img2.onmouseup = function () {
+            this.style.cursor = "grab";
+        }
+        // Toggle attribute ^open^ from dialog
+        img.onclick = function() {
+            dialog.toggleAttribute("open");
+        }
+    </script>
+</body>
+</html>

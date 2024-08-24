@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+div {
+    /* color */
+    background-color: rgb(195, 212, 226);
+    /* border */
+    border-radius: 15px;
+    border: 1px solid rgb(19, 66, 121);
+    padding: 20px;
+    text-align: center;
+}
+
+div p {
+    /* inherit from parent */
+    border: inherit;
+    border-radius: inherit;
+    padding: inherit;
+    transition: .1s ease-in-out;
+}
+
+div p:hover {
+    background: rgb(30, 30, 88);
+    color: white;
+    cursor: pointer;
+}

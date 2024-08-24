@@ -1,0 +1,21 @@
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+
+  transition: width .2s .2s linear, height 2s 2s ease-out;
+}
+
+div:hover {
+  width: 400px;
+  height: 300px;
+  /* الوقت المستغرق للتنفيذ */
+  transition-duration: .5s;
+  /* انتطر ثم نفذ */
+  transition-delay: .2s, 1s;
+  /* انتطر الخاصيه المراده */
+  transition-property: width, height;
+  /* النعومه */
+  transition-timing-function: linear;
+
+}

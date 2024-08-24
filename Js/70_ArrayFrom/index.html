@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Array.from(iterable, mapFunc, this)
+        variable
+        string numbers
+        set
+        using the map function
+        arrow function
+        shorten the method + use arguments
+    */
+
+    console.log(Array.from("abdalla")); // ['a', 'b', 'd', 'a', 'l', 'l', 'a']
+
+    console.log(Array.from("1234", (value) => +value + +value )); // [2, 4, 6, 8]
+
+    let array = [1, 1, 1, 2, 3, "A", "A"];
+
+    let mySet = new Set(array);
+
+    console.log(mySet); // {1, 2, 3, 'A'}
+
+    console.log(Array.from(mySet)); // [1, 2, 3, 'A']
+    console.log(Array.from(new Set(array))); // [1, 2, 3, 'A']
+
+    function af() {
+      return Array.from(arguments) // ['abdalla', 'said', 'ali']
+    }
+
+    console.log(af("abdalla", "said", "ali"));
+  </script>
+</body>
+</html>

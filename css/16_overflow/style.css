@@ -1,0 +1,12 @@
+p {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: #aaa;
+    /* overflow: hidden; */
+    /* overflow: auto; */
+    /* overflow-y: hidden; */
+    overflow-x: hidden;
+}

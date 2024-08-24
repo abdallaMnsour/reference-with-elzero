@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="canvas.css">
+  <title>canvas</title>
+</head>
+<body>
+  <canvas id="c" width="300" height="300"></canvas>
+  <script>
+    /**
+     * lesson 2
+     *  ====================
+     *  .width;
+     *  .height;
+     *  .lineWidth = num;
+     *  .moveTo();
+     *  .lineTo();
+     *  .stroke();
+     *  =====================
+     */
+    var myCanvas = document.getElementById("c"),
+    myContext = myCanvas.getContext("2d");
+    myCanvasWidth = myCanvas.width,
+    myCanvasHeight = myCanvas.height;
+
+    myContext.fillStyle = "#0af";
+    
+    myContext.fillRect(0, 0, myCanvasWidth, myCanvasHeight);
+
+    myContext.strokeStyle = "#fa0";
+
+    myContext.lineWidth = 3
+
+    // top left line
+    myContext.moveTo(10, 10);
+
+    myContext.lineTo(130, 130 );
+
+    // top right line
+    myContext.moveTo(290, 10);
+
+    myContext.lineTo(170, 130 );
+
+    // bottom left line
+    myContext.moveTo(10, 290);
+
+    myContext.lineTo(130, 170);
+
+    // bottom right line
+    myContext.moveTo(290, 290);
+
+    myContext.lineTo(170, 170);
+
+    myContext.stroke();
+  </script>
+</body>
+</html>

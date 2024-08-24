@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let name = "eLZERo";
+      let invertedNumbers = [1, -23, "gamal", -13, 13, -6, -13, 62, "abdalla"];
+      let removeNumbers = "El16ze890ro";
+
+      let Case = name
+        .split("")
+        .map(function (val) {
+          let test =
+            val == val.toUpperCase() ? val.toLowerCase() : val.toUpperCase();
+
+          return test;
+        })
+        .join("");
+
+      let replaceArrayToggle = [];
+
+      let toggleNumbers = invertedNumbers.map(function (val) {
+        return typeof val === "number"
+          ? replaceArrayToggle.push(-val)
+          : undefined;
+      });
+
+      let numberRemove = removeNumbers
+        .split("")
+        .filter(function (val, index, array) {
+          return Number.isNaN(Number(val));
+        })
+        .join("");
+
+      console.log(Case); // ElzerO
+      console.log(replaceArrayToggle); // invertedNumbers
+      console.log(numberRemove); // invertedNumbers
+
+      // --------------------------
+
+      let calc = "E1lz52er6o";
+
+      let filterCalc = calc
+        .split("")
+        .filter(function (val) {
+          return !isNaN(parseInt(val));
+        })
+        .map(function (val) {
+          return val * val;
+        });
+
+      console.log(filterCalc);
+    </script>
+  </body>
+</html>

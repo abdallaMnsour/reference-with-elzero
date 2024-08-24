@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="canvas.css">
+  <title>Document</title>
+</head>
+<body>
+  <canvas width="300" height="300"></canvas>
+  <script>
+
+    /**
+     * lesson 3
+     * ====================
+     *  .font = "";
+     *  .fillText(text, x, y, width);
+     * =====================
+     */
+    let myCanvas = document.getElementsByTagName("canvas")[0],
+    myContext = myCanvas.getContext("2d"),
+    myWidht = myCanvas.width,
+    myHeight = myCanvas.height;
+
+    myContext.fillStyle = "#ccc";
+
+    myContext.fillRect(0, 0, myWidht, myHeight);
+
+    myContext.fillStyle = "#fa0";
+
+    myContext.font = "24px tahoma";
+
+    myContext.fillText("A", 20, 20);
+
+    myContext.fillStyle = "#0af";
+    myContext.fillText("B", 40, 40);
+
+    myContext.fillStyle = "#a0f";
+    myContext.fillText("D", 60, 60);
+    
+    myContext.fillStyle = "#af0";
+    myContext.fillText("A", 80, 80);
+    myContext.fillStyle = "#f0a";
+    myContext.fillText("L", 100, 100);
+    
+    myContext.fillStyle = "#0fa";
+    myContext.fillText("L", 120, 120);
+    
+    myContext.fillStyle = "#f04";
+    myContext.fillText("Abdalla", 140, 140, 15);
+
+    myContext.font = "50px arial"
+    myContext.strokeStyle = "#aaf";
+    myContext.lineWidth = 2;
+    myContext.strokeText("hello world", 35, 250);
+  </script>
+</body>
+</html>

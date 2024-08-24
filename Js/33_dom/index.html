@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" name="one" />
+    </form>
+    <a href="https://www.google.com">Google</a>
+    <a href="https://www.facebook.com">Facebook</a>
+    <img src="../../css/task_1/images/Colorful.png" alt="image" width="100" />
+    <script>
+      /*
+      dom اختصارات للوصول الي العناصر
+        title
+        body
+        images
+        forms
+        links
+    */
+
+      console.log(document.title);
+      console.log(document.body);
+      console.log(document.forms[0]);
+      console.log(document.forms[0].one); // attr[name]
+      console.log(document.links[0]);
+      console.log(document.links[0].href);
+      console.log(document.images[0]);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+.first::first-letter {
+  font-size: 30px;
+  font-weight: bold;
+  background-color: red;
+}
+
+.second::first-line {
+  color: green;
+  font-weight: bold;
+}
+
+.third::selection {
+  color: yellow;
+  background-color: black;
+}
+
+::selection {
+  color: #000;
+  background-color: #ffff00;
+}

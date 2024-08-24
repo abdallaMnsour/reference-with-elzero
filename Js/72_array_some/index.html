@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        array.some(function(value, index, array), this)
+        تستخدم في البحث عن عنصر من عناصر الاراي
+        boolean بترجع
+      */
+
+      let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+      let range = {
+        min: 8,
+        max: 10,
+      };
+
+      let someArray = array.some(function (e) {
+        return e <= this.max && e >= this.min;
+      }, range);
+
+      console.log(someArray);
+
+      let arrayNames = ["abdalla", "ahmed", "gamal", "osama"];
+
+      function found(array, search) {
+        return array.some(function (e) {
+          return e === search;
+        })
+      }
+
+      console.log(found(array, "abdalla"));
+    </script>
+  </body>
+</html>

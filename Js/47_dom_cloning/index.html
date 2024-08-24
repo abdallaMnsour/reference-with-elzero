@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="my-p" class="p">this is my <span>paragraph</span></p>
+    <div id="my-div">this my div</div>
+    <script>
+      /*
+        بياخذ نسخه من العنصر الاصلي بس من غير العناصر اللي جوا
+          cloneNode()
+        بياخذ نسخه من العنصر الاصلي بس بالعناصر اللي جوا
+          cloneNode(true)
+      */
+      let myP = document.getElementById("my-p").cloneNode(true);
+      let myDiv = document.getElementById("my-div");
+
+      myDiv.appendChild(myP)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let myAdmins = ["ahmed", "osama", "sayed", "Stop", "samera"],
+        myEmployees = [
+          "amgad",
+          "samah",
+          "ameer",
+          "omar",
+          "othman",
+          "amany",
+          "samia",
+          "anwar",
+        ];
+
+      let index = 0;
+      do {
+        index++;
+      } while (myAdmins[index] !== "Stop");
+      document.write(`<div>We Have ${index} Admins</div><br>`);
+      for (let i = 0; i < myAdmins.length; i++) {
+        if (myAdmins[i] === "Stop") break;
+
+        document.write("<hr>The Admin For Team " + (i + 1) + "<div>");
+
+        document.write(`<h3>${myAdmins[i]} :</h3>`);
+
+        let n = 1;
+
+        for (let j = 0; j < myEmployees.length; j++) {
+          if (
+            myAdmins[i][0].toUpperCase() === myEmployees[j][0].toUpperCase()
+          ) {
+            document.write(`<p>- ${[n++]} ${myEmployees[j]}</p>`);
+          }
+        }
+        document.write("</div>");
+      }
+    </script>
+  </body>
+</html>
+
+
+<!-- 5 : 46 : 55 -->

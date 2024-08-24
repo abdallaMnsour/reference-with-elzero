@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function showDetails(...attr) {
+        let string = "Unknown";
+        let number = "Unknown";
+        let bool = false;
+
+        for (let i = 0; i < attr.length; i++) {
+          if (typeof attr[i] === "string") {
+            string = attr[i];
+          } else if (typeof attr[i] === "number") {
+            number = attr[i];
+          } else {
+            bool = attr[i];
+          }
+        }
+        if (bool === true) {
+          bool = "You Are Available For Hire";
+        } else {
+          bool = "You Are Not Available For Hire";
+        }
+        return `Hello ${string}, Your Age is ${number}, ${bool} <br>`;
+      }
+
+      document.write(showDetails("abdalla", true, 22));
+      document.write(showDetails(false, "Osama", 43));
+    </script>
+  </body>
+</html>
+
+
+<!-- 6 : 16 : 41 -->

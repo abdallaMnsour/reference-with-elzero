@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Map() => تعمل مع اي نوع بيانات
+        WeakMap() => لا تعمل الا مع الاوبجكت فقت و اذا حذفت قيمه من قيمها فلن تحذف
+      */
+
+      let weakMap = new WeakMap([
+        [{age: 22}, "test age"]
+      ])
+
+      let value = {name: "abdalla"}
+      
+      weakMap.set(value, "test WeakSet")
+
+      console.log(weakMap);
+      console.log(weakMap.get({age: 22})); // يجب ان يكون الاوبجكت له متغير
+      console.log(weakMap.get(value));
+      
+      value = null;
+      
+      console.log(weakMap); // رغم اني حذفت القيمه الا انها لم تحذف
+      
+    </script>
+  </body>
+</html>

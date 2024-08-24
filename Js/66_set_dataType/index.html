@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      بتقوم بازاله المتشابه
+      Set(array) data type
+
+      properties
+        size() عدد العناصر
+
+      methods
+        add() بيضيف
+        delete() bool بيحذف و بيرجع
+        clear()
+        has()
+    */
+    let array = [1, 1, 1, 2, 3];
+
+    let newArray = new Set(array).add(1);
+
+    console.log(array)
+    console.log(newArray.add(1)) // add number 1
+    console.log(newArray.delete(2)) // delete number 2
+    console.log(newArray.has(2)) // false
+    console.log(newArray)
+    console.log(newArray.clear()) // delete all
+    console.log(array.length) // 5
+    console.log(newArray.size) // 3
+  </script>
+</body>
+</html>
+
+<!-- 02 : 09 : 00 -->

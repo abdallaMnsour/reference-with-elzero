@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // تستقبل قيم غير معلومه parameter عمل
+      function calc(...numbers) {
+        let result = 0;
+        for (let i = 0; i < numbers.length; i++) {
+          result = numbers[i];
+        }
+        return `Result is ${result}`;
+      }
+      console.log(calc(12, 31, 3, 41, 23, 5, 67));
+
+      //                   [ES6]
+      function test(name = "Unknown") {
+        // القيمه الافتراضيه
+        // if (name === undefined) {
+        //   name = "Unknown";
+        // }
+
+        // name = name || "Unknown"
+
+        console.log("name is " + name);
+      }
+      test("gamal");
+
+      function sayHallow() {
+        console.log("Hello Abdalla");
+      }
+
+      let html = document.getElementsByTagName("html")[0];
+      // function لا يجب وضع الاقواس الخاصه بال
+      html.onclick = sayHallow;
+
+      // arrow function الدوال السهميه او ال
+      // let nameFunction = لتعمل الدوال السهميه يجب عمل
+      let arrow1 = _ => "hello from arrow function";
+      let arrow2 = name => `hello ${name} from arrow function`;
+      let arrow3 = (name, age) => `hello ${name + " " + age} from arrow function`;
+
+      console.log(arrow1());
+      console.log(arrow2("abdalla"));
+      console.log(arrow3("abdalla", 22));
+    </script>
+  </body>
+</html>

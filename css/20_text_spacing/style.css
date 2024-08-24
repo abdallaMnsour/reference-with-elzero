@@ -1,0 +1,23 @@
+h2 {
+    text-indent: 100px;
+}
+div {
+    width: 200px;
+    background: #aaa;
+
+    /* ================== */
+
+    line-height: 1.6; /* 1.7 */
+    letter-spacing: 1px;
+    word-spacing: 4px;
+
+    /* لاينزل بالكلام تستخدم في العنوان */
+    /* white-space: nowrap; */
+
+
+    /* عند اول فرصه break يعمل */
+    word-break: break-word;
+    /* ايا كان break يعمل */
+    word-break: break-all;
+
+}

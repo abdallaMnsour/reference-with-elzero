@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // destructuring in array
+    let name1 = "abdalla";
+    let name2 = "tasnim";
+
+    // let change = name1;
+    // name1 = name2;
+    // name2 = change;
+
+    console.log(name1) // tasnim
+    console.log(name2) // abdalla
+
+    // new
+    let [one, two] = [name2, name1]
+
+    console.log(one)
+    console.log(two)
+
+    /////////////////////////////////////
+
+    let array = ["abdalla", "ali", "osama", ["mahmod", "mazin", ["elzero", "mohammed"]]]
+
+    let [abd, , , [, maz, [, moh]]] = array;
+
+    console.log(abd)
+    console.log(maz)
+    console.log(moh)
+  </script>
+</body>
+</html>

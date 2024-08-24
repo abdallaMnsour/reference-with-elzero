@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      alert("message")
+      confirm("message") => boolean
+      prompt("message", "default or placeholder") => الرساله اللي كتبها المستخدم
+    */
+
+    // window.alert("hello user")
+    // this.alert("hello user")
+    // alert("hello user")
+
+    // sweetalert2 موقع بيقدم اليرت
+
+    let confirmMsg = confirm("are you sure you want to delete?");
+
+    console.log(confirmMsg);
+
+    confirmMsg // true || false
+      ? console.log("item is deleted")
+      : console.log("item is not deleted");
+
+    let promptMsg = prompt("what is best day for you ?", "type 3 character")
+
+    console.log(promptMsg);
+  </script>
+</body>
+</html>

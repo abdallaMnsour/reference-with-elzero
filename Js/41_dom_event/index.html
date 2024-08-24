@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="https://google.com">Google</a>
+
+    <form action="">
+      <input type="text" name="name" placeholder="username" /><br />
+      <input type="number" name="age" placeholder="you'r age" /><br />
+      <!-- حروف و ارقام -->
+      <input
+        type="password"
+        name="password"
+        placeholder="enter you'r password"
+      /><br />
+      <button>click</button>
+    </form>
+    <script>
+      /*
+        preventDefault() => امنع تصرف الايفينت الافتراضي
+      */
+      document.links[0].onmouseenter = function (event) {
+        console.log(event);
+        event.preventDefault(); // امنع تصرف الايفينت الافتراضي
+      };
+
+      // ! استخدام
+
+      document.forms[0].onsubmit = function (event) {
+        let username = false;
+        let age = false;
+        let passValid = false;
+
+        // true اذا كان الباسورد يحتوي علي نص ستكون
+        let hasStr = false;
+        // true اذا كان الباسورد يحتوي علي رقم ستكون
+        let hasNum = false;
+        for (let i = 0; i < this.password.value.length; i++) {
+          if (isNaN(+this.password.value[i])) {
+            hasStr = true;
+            console.log("found string");
+            break;
+          }
+        }
+        for (let i = 0; i < this.password.value.length; i++) {
+          if (!isNaN(+this.password.value[i])) {
+            hasNum = true;
+            console.log("found number");
+            break;
+          }
+        }
+
+        if (
+          document.forms[0].name.value != "" &&
+          document.forms[0].name.value.length <= 10
+        ) {
+          username = true;
+        }
+
+        if (
+          document.forms[0].age.value != "" &&
+          !isNaN(document.forms[0].age.value)
+        ) {
+          age = true;
+        }
+
+        if (hasNum && hasStr) {
+          passValid = true;
+        }
+
+        if (!passValid || !age || !username) {
+          console.warn("you'r password is not valid");
+          alert("you'r password is not valid");
+          event.preventDefault();
+        }
+      };
+    </script>
+  </body>
+</html>

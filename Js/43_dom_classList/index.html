@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="my-div" class="one two the-div learn">this is my div</div>
+    <script>
+      /*
+        classList
+          length => عدد الكلاسس
+          value => جميع الكلاسس في نص واحد
+          contains => bool يبحث في مجموعه الكلاسس بيرجع
+          item(index) => رجع الكلاس صاحب هذا الاندكس
+          add => اضف كلاس
+          remove => احذف كلاس
+          toggle => لو الكلاس موجود احذفه لو مش موجود ضيفه
+      */
+      let div = document.querySelector("#my-div");
+
+      console.log(div.classList); // array[object]
+
+      console.log(div.classList.length); // 4
+
+      console.log(div.classList.value); // one two the-div learn
+
+      console.log(div.classList.contains("two")); // true
+
+      console.log(div.classList[0]); // one
+      console.log(div.classList.item(0)); // one
+
+      div.classList.add("three");
+
+      div.classList.remove("one");
+
+      div.onclick = function () {
+        this.classList.toggle("two")
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [5, 6, 6, 14, 6, 7];
+
+      let calc = array.reduce(function (acc, value, index, array) {
+        // هو اول عنصر في الاراي
+        console.log(`Accumulator => ${acc}`);
+        // هي القيمه اللتي يتم معالجتها
+        console.log(`current value => ${value}`);
+        // current "value" الخاص بال index هو ال
+        console.log(`current index => ${index}`);
+        console.log(`array => ${array}`);
+        console.log(acc + value);
+        console.log("-----------------");
+        // بشكل صحيح reduce لتعمل ال return يجب عمل
+        // بيرجع آخر قيمه
+        return acc + value;
+        // initialValue اذا كانت موجوده تحل محل اول عنصر في الاراي
+      }, 5);
+
+      let theBiggest = ["Bla", "Propaganda", "Other", "aaa", "abdalla"];
+
+      let check = theBiggest.reduce(function (acc, val) {
+        return acc.length > val.length ? acc : val;
+      });
+
+      console.log(check);
+
+      let removeChars = ["E", "@", "@", "l", "z", "@", "e", "@", "r", "o"];
+
+      let finalString = removeChars.filter(function (val) {
+        // let test = "";
+        // if (val !== "@") {
+        //   test += val
+        // }
+        return !val.startsWith("@");
+      }).reduce(function(acc, current) {
+        return acc += current;
+        // Or
+        return `${acc}${current}`;
+      });
+
+      console.log(finalString)
+    </script>
+  </body>
+</html>

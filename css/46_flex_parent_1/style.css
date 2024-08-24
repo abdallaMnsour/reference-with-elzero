@@ -1,0 +1,44 @@
+.float, .flex {
+  background-color: #ddd;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.float div,
+.flex div {
+  background-color: red;
+  width: 25%;
+}
+
+/* ============================ */
+
+/* 
+  1 - display: flex -> to start flexible box
+  2 - flex-direction: row -> default
+  3 - flex-wrap: nowrap -> default
+  4 - flex-flow: [flex-direction] + [flex-wrap]
+*/
+
+.flex {
+  display: flex;
+
+  flex-direction: row;
+  flex-direction: row-reverse;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+
+  flex-flow: row-reverse wrap-reverse;
+}
+
+.float {
+  overflow: hidden;
+}
+
+.float div {
+  float: left;
+}
+/* ============================ */

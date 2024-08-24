@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Array
+          concat() -> يقوم بجمع اكثر من اراي في اراي واحد و لا يقوم بتغيير الاراي الاصليه
+          join() -> يحول الاراي لنص و يمكن فصل العناصر باي علامه
+      */
+
+      let myOldFriends = ["abdalla", "gamal", "osama", "tasnim"];
+      let mySchoolFriends = ["mahmod", "yasin"];
+
+      let totalFriends = myOldFriends.concat(
+        mySchoolFriends,
+        ["gamal"],
+        "ali",
+        [1, [2]]
+      ); // 2 لا يقوم بدمج النستد رقم
+
+      console.log(myOldFriends); // الاراي الاصليه لم تتغير
+      console.log(totalFriends);
+
+      console.log(myOldFriends.join());
+      console.log(myOldFriends.join(""));
+      console.log(myOldFriends.join("|"));
+    </script>
+  </body>
+</html>

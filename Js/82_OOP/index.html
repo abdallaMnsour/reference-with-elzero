@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      "use strict"
+
+      // constructor function
+
+      function User(id, username, salary) {
+        this.i = id;
+        this.u = username;
+        this.s = salary;
+        console.log(this);
+      }
+
+      // class هيا اللي بتعرف ان ده new كلمه
+      let userOne = new User(100, "abdalla", 5000);
+      let userTwo = new User(101, "tasnim", 6000);
+      let userThree = new User(102, "abdelrahman", 7000);
+
+      // console.log(userOne);
+      // console.log(userTwo);
+      // console.log(userThree);
+
+      // الطريقه القديمه لانشاء متغيرات
+      // const userOne = {
+      //   id: 100,
+      //   username: "abdalla",
+      //   salary: 5000
+      // }
+      // const userTwo = {
+      //   id: 101,
+      //   username: "tasnim",
+      //   salary: 6000
+      // }
+      // const userThree = {
+      //   id: 102,
+      //   username: "abdelrahman",
+      //   salary: 7000
+      // }
+    </script>
+  </body>
+</html>

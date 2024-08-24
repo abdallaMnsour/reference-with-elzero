@@ -1,0 +1,137 @@
+/* Small Screen */
+@media (max-width: 540px)
+{
+    header .fa-solid.fa-bars {display: inline-block}
+
+    header.nav  { justify-content: space-between}
+
+    header.nav  *:not(.logo span) {margin: 0 22px;}
+
+    header.nav .button,
+    header.nav nav {display: none}
+
+    .logo {
+        font-size: 20px;
+        font-weight: 1000;
+    }
+
+    .main,
+    .answers {
+        text-align: center;
+        flex-direction: column;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        margin: 100px auto;
+    }
+
+    .main .text-about,
+    .main .text-about span {margin: 0}
+
+    .main .text-about h2 {font-size: 7vw}
+
+    .main .button {
+        margin-bottom: 20px;
+    }
+
+    .main .image-about,
+    .main .image-about img {
+        border-radius: 30px;
+    }
+
+    .main .image-about .external-box {
+        left: auto;
+        right: 15px;
+        bottom: -190px;
+    }
+
+    /* answers */
+
+    .answers {
+        width: 100%;
+        padding: 20px;
+        margin-top: 300px;
+    }
+
+    .answers .answer-text {
+        margin-top: 100px;
+        width: 100%;
+    }
+
+    .answers .icons-answers  {
+        text-align: start;
+    }
+
+    .answers .answer-image {
+        width: 88%;
+        border-radius: 10px;
+    }
+
+    .answers .answer-image img {width: 100%;border-radius: 10px;}
+
+    .answers .external-box {
+        bottom: -100px;
+        left: 0;
+    }
+
+    .answers .external-box button {
+        margin-top: 5px;
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    /* courses */
+    .courses-section .courses .con-button {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .courses-section .cards .card:first-child {
+        margin-left: 4.1%;
+    }
+    
+    /* teachers */
+    section.teachers-sec {
+        padding: 22px;
+    }
+
+    section.teachers-sec header {
+        width: auto;
+    }
+
+    /* asked */
+    .asked {
+        width: 94%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .asked header {width: 100%;}
+
+    .asked header p {
+        width: 87%;
+        margin: auto;
+    }
+    
+    .asked header .learn-more {
+        margin: 20px;
+    }
+
+    .asked .con-details {
+        width: 87%;
+    }
+
+    /* join-us */
+    section.join-us header {
+        width: 80%;
+    }
+
+    section.join-us header h2 {
+        font-size: 30px;
+    }
+
+    footer .icons li {
+        margin: 5px !important;
+    }
+}

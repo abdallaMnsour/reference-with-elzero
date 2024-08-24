@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    /**
+     * lesson 4
+     * ====================
+     *  .strokeText();
+     *  .fillText();
+     * =====================
+     */
+    // Create Element
+    let myElement = document.createElement("canvas");
+    myElement.id = "c";
+    myElement.width = "300";
+    myElement.height = "300";
+   
+    // Add Element
+    document.body.appendChild(myElement);
+
+    // myElement.style.display = "block";
+    
+    // Get Element
+    let myCanvas = document.getElementById("c");
+
+    // style css
+    myCanvas.style.display = "block";
+    myCanvas.style.margin = "20px auto";
+    myCanvas.style.border = "1px solid #ccc";
+    myCanvas.style.borderRadius = "10px ";
+
+    // Fill And Style Option
+    let myContext = myCanvas.getContext("2d"),
+    myWidth = myCanvas.width,
+    myHeight = myCanvas.height;
+
+    myContext.font = "24px arial";
+    myContext.strokeStyle = "#0af";
+    myContext.lineWidth = 1;
+
+    myContext.moveTo(30, 45);
+    myContext.lineTo(145, 45);
+
+    myContext.fillStyle = "#fa0";
+    myContext.fillRect(0, 0, myWidth, myHeight);
+
+    myContext.fillStyle = "#0af";
+    myContext.fillText("a.mansour", 30, 50);
+    myContext.stroke();
+    
+    myContext.font = "40px arial"
+    myContext.fillStyle = "#fefefe"
+    myContext.fillText("Hello Abdalla", 30, 250);
+    
+    myContext.strokeStyle = "#f0f";
+    myContext.lineWidth = 1;
+    myContext.strokeText("Hello Abdalla", 30, 250);
+    // 
+  </script>
+</body>
+</html>

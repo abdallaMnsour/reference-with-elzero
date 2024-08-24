@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <!-- first comment -->
+      <div>one</div>
+      <!-- second comment -->
+      <div id="div">two</div>
+      <!-- third comment -->
+      <div>three</div>
+      <!-- last comment -->
+    </div>
+    <script>
+      /*
+        nextSibling -> الاخ التالي ايا كان
+        nextElementSibling -> العنصر الاخ التالي
+        previousSibling -> الاخ السابق ايا كان
+        previousElementSibling -> العنصر الاخ السابق
+        parentElement -> الاب لهذا العنصر
+      */
+
+      let div = document.getElementById("div");
+
+      // التالي ايا كان
+      console.log(div.nextSibling.nextSibling);
+      // العنصر التالي
+      console.log(div.nextElementSibling);
+
+      // السابق ايا كان
+      console.log(div.previousSibling.previousSibling);
+      // العنصر السابق
+      console.log(div.previousElementSibling);
+
+      console.log(div.parentElement);
+    </script>
+  </body>
+</html>

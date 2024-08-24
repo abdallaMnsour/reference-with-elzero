@@ -1,0 +1,26 @@
+* {
+  /* ======================== */
+  box-sizing: content-box;
+  /* ======================== */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* ======================== */
+}
+.parent {
+  background-color: #aaa;
+  width: 600px;
+  padding: 10px;
+  margin: 20px auto;
+  overflow: hidden;
+  /* يجب عمل الوضع الافتراضي ليعمل */
+  box-sizing: content-box;
+}
+
+.child {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border: 10px solid #f90;
+  float: left;
+}

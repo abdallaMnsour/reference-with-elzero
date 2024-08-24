@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      Regular Expression
+        Syntax
+        /pattern/modifier(s);
+        new RegExp("pattern", "modifier(s)");
+
+        modifiers => flags
+          i => case-insensitive
+          g => global
+          m => multilines
+
+        search methods
+          match(pattern)
+        
+        match
+          matches a string against a regular expression pattern
+          returns an array with the matches
+          returns null if no match is found.
+
+        - Part 1
+        (X|Y) => X or Y
+        [0-9] => 0 to 9
+        [^0-9] => any character not 0 to 9
+        practice
+
+        - part 2
+          [a-z]
+          [^a-z]
+          [A-Z]
+          [^A-Z]
+          [abc]
+          [^abc]
+    */
+
+    let string = "3bs oc 9j#2Ald ns@9i^eo! c ns@20& 9e3 3l cnx9w"
+    let notValid = "o@gmail.com o@@@gmail.com o@@@gmail..com o@gmail.comm"
+
+    // let regexp = new RegExp("[^0-9a-z ^]", "gi")
+    let regexp = /[^a-z0-9 ^]/gi;
+    let validEmail = /[a-z]@gmail.(com|org)/gi;
+
+    console.log(string.match(regexp));
+    console.log(notValid.match(validEmail));
+  </script>
+</body>
+</html>
+<!-- 3 : 28 : 00 -->

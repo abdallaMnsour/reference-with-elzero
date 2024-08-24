@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 20px 0;
+        background-color: #ccc;
+        list-style: none;
+        width: 300px;
+        margin: auto;
+      }
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        opacity: 0.4;
+        transition: 0.3s;
+      }
+      li[active] {
+        opacity: 1;
+      }
+      .window {
+        width: 300px;
+        height: 200px;
+        margin: 20px auto 0;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li style="background-color: #fa0" color="#fa0"></li>
+      <li style="background-color: #0fa" color="#0fa"></li>
+      <li style="background-color: #a0f" color="#a0f"></li>
+      <li style="background-color: #0af" color="#0af"></li>
+    </ul>
+    <div class="window"></div>
+    <script>
+      let box = document.querySelectorAll("ul li");
+      let myWindow = document.getElementsByClassName("window")[0];
+
+      box.forEach((e) => {
+        if (e.getAttribute("color") == localStorage.color) {
+          e.setAttribute("active", "");
+        }
+      });
+
+      for (let i = 0; i < box.length; i++) {
+        box[i].onclick = function () {
+          box.forEach((element) => {
+            element.removeAttribute("active");
+          });
+          this.setAttribute("active", "");
+          localStorage.color = this.getAttribute("color");
+          myWindow.style.background = localStorage.color;
+        };
+      }
+
+      myWindow.style.background = localStorage.color;
+    </script>
+  </body>
+</html>

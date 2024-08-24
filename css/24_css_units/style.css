@@ -1,0 +1,26 @@
+/* 
+  Css Units
+    px
+    em = 1 time = ترث من الاب حجم الخط
+    rem = Root time = html ترث من الاب حجم الخط الفرق ان الاب هو ال
+    percentage = النسبه المئويه
+    vw = 1 View port width = 1% من عرض الشاشه
+
+  Read
+    vmin
+    vh
+
+  Default Font Size For Web Page Is 16px
+ */
+
+body {
+  font-size: 20px;
+}
+
+div {
+  font-size: 1em;
+}
+
+span {
+  font-size: 2em;
+}

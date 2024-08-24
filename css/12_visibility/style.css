@@ -1,0 +1,11 @@
+div {
+    background: red;
+    width: 100px;
+    margin: 10px;
+}
+
+.first {
+    visibility: visible;
+    visibility: hidden;
+    opacity: .5;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href=""></a>
+    <img
+      src="../../css/task_1/images/laptop_1copy.png"
+      id="test"
+      alt=""
+      title="image"
+      width="100"
+      data-text="text from data"
+      data-test="testing"
+      class="link"
+      hello="hello"
+    />
+    <script>
+      /*
+        getAttribute(attrName)
+        setAttribute(attrName, newValue)
+      */
+      document.links[0].href = "https://www.facebook.com";
+
+      console.log(document.links[0].href);
+
+      console.log(document.images[0].getAttribute("src"));
+
+      document.images[0].setAttribute("src", "../../css/task_1/images/cat.png");
+
+      // data عباره عن attr من العنصر عندما يكون ال attribute طريقه الحصول علي ال
+      console.log(document.images[0].dataset.text);
+      console.log(document.images[0].dataset.test);
+      // طريقه سهله
+      console.log(document.images[0].getAttribute("data-text"));
+      console.log(document.images[0].getAttribute("hello"));
+      // الخاص بالعنصر class الحصول علي ال
+      console.log(document.images[0].className);
+    </script>
+  </body>
+</html>

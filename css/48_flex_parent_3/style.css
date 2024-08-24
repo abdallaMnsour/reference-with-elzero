@@ -1,0 +1,65 @@
+.float, .flex {
+  background-color: #ddd;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.float div,
+.flex div {
+  background-color: red;
+  width: calc(100% / 3);
+  padding: 10px;
+}
+
+/* =============================== */
+* {
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: stretch;
+  align-items: flex-start;
+  align-items: flex-end;
+  align-items: center
+}
+
+.one {
+  height: 70px;
+}
+
+.two {
+  height: 100px;
+}
+
+.center {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* text-align: center;
+  line-height: 100px */
+}
+
+/* .center span {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+} */
+/* =============================== */
+.float {
+  overflow: hidden;
+}
+
+.float div {
+  float: left;
+}

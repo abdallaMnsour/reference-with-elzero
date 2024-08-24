@@ -1,0 +1,34 @@
+:root {
+  /* global */
+  --mainColor: rgb(12, 211, 148);
+}
+
+div {
+  background-color: var(--mainColor);
+  padding: 20px;
+  color: white;
+}
+
+h3 {
+  background-color: #ddd;
+  color: var(--mainColor);
+  padding: 20px;
+}
+
+p {
+  border: 3px solid var(--mainColor);
+  color: var(--mainColor);
+  padding: 20px;
+}
+
+a:hover {
+  color: var(--mainColor);
+}
+
+p.main, h2 {
+  /* local */
+  --mainColor: dodgerblue;
+  border: 2px solid var(--mainColor);
+  padding: 20px;
+  color: var(--mainColor);
+}

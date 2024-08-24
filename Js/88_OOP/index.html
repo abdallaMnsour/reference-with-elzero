@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Encapsulation
+          class fields are public by default => 
+          guards the data against illegal access. => 
+          helps to achieve the target without revealing its complex details => 
+          will reduce human errors => 
+          make the app more flexible and manageable => 
+          simplifies the app => 
+      */
+      class User {
+        // declare privet property
+        #salary
+        constructor(id, username, eSalary) {
+          this.id = id;
+          this.uName = username;
+          // يقوم باراجاع الرقم الاكثر من ثلاث
+          this.#salary = +eSalary.match(/\d{3,}/g);
+        }
+        returnSalary() {
+          return this.#salary;
+        }
+      }
+
+      class Admin extends User {
+        // declare password
+        #pass
+        constructor(id, username, eSalary, password) {
+          super(id, username, eSalary);
+          this.#pass = password;
+        }
+        showPass() {
+          // تقوم بتبديل الحروف ب (*) عدا آخر ثلاث ارقام
+          let text = "";
+          for (let i = 3; i < this.#pass.length; i++) {
+            text += "*"
+          }
+          text += this.#pass.slice(-3)
+          return text
+        }
+      }
+
+      let userOne = new User(100, "abdalla",  "3 5000 realSo3odi")
+      let adminOne = new Admin(100, "abdalla",  "3 350 realSo3odi", "Elzero Learn")
+
+      console.log(userOne.returnSalary());
+      console.log(adminOne.returnSalary());
+    </script>
+  </body>
+</html>
+<!-- 5 : 14 : 00 -->

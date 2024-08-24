@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        font-family: arial;
+        box-shadow: 3px 3px 15px 2px #888;
+        border-radius: 10px;
+        background-color: #eee;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let userName = "Osama";
+      let theParagraph = "Elzero Web School";
+      let theTime = "2:01";
+
+      let card = `
+        <div>
+          <h2>hello ${userName}</h2>
+          <p>${theParagraph}</p>
+          <span>${theTime}</span>
+        </div>
+        `;
+
+      document.write(card);
+      document.write(card);
+      document.write(card);
+    </script>
+  </body>
+</html>

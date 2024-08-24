@@ -1,0 +1,29 @@
+/* 
+  :empty
+  :visited
+  :hover
+  :checked
+  :focus
+*/
+
+:empty {
+  padding: 10px;
+  background-color: #eee;
+  border: none;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: yellow;
+}
+
+input[type=checkbox]:checked + label {
+  color: red;
+}
+
+input[type=text]:focus {
+  outline: 2px solid rgb(255, 196, 0);
+}

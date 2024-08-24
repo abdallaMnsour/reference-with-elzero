@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>stop</button>
+    <script>
+      let btn = document.getElementsByTagName("button")[0];
+
+      /*
+        setTimeout(function, time, parameters ... )
+        clearTimeOut(index timeOut)
+      */
+
+      // arrow function
+      setTimeout(() => {
+        console.log("work");
+      }, 3000);
+
+      // normal setTimeout
+      setTimeout(function () {
+        console.log(`hello user`);
+      }, 3000);
+
+      // setTimeout with parameters
+      setTimeout(
+        function (name, age) {
+          console.log(`hello ${name} you'r age is ${age}`);
+        }, 3000, "abdalla", 22);
+
+      // How stop the time
+      let stopTime = setTimeout(function () {
+        console.log("work");
+      }, 3000);
+
+      btn.onclick = function () {
+        clearTimeout(4)
+        // or
+        clearTimeout(stopTime)
+      }
+
+      setTimeout(func, 1000, "abdalla", 22);
+
+      function func(name, age) {
+        console.log(`hello ${name}, you'r age is ${age}`);
+      }
+    </script>
+  </body>
+</html>

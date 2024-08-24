@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      Regular Expression
+      \b => match at the beginning or end of a word
+      \B => match not at the beginning/end of a word
+
+      Test method
+      pattern.test(input); => boolean
+    */
+
+    let names = "osama spam23 35Spam Spam22 spam Aspamo";
+
+    // let re = /\bspam\b/ig; // spam
+    let re = /(\bspam|spam\b)/ig;
+
+    console.log(names.match(re));
+
+    // ينفع
+    console.log(re.test(names));
+    
+    // ينفع
+    console.log(/(\bspam|spam\b)/ig.test(names));
+    
+    // ينفع عشان مكتوبه بشكل مباشر
+    console.log(/(\bspam|spam\b)/ig.test("Spammer"));
+
+    // g(global) فيه حرف ال re مينفعش عشان المتغير
+    // console.log(re.test("Spammer Spam"));
+  </script>
+</body>
+</html>

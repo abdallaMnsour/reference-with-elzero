@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll to top</title>
+    <style>
+      body {
+        height: 5000px;
+      }
+      #btn {
+        color: white;
+        background-color: #0af;
+        width: 30px;
+        height: 30px;
+        border: none;
+        outline: none;
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        cursor: pointer;
+        transform: scale(0);
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">^</button>
+    <script>
+      let btn = document.getElementById("btn");
+
+      btn.onclick = function () {
+        scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
+      };
+
+      onscroll = function () {
+
+        if (scrollY >= 1000) {
+          btn.style.transform = "scale(1)";
+        } else {
+          btn.style.transform = "scale(0)";
+        }
+      };
+    </script>
+  </body>
+</html>
+
+<!-- 00 : 53 : 00 -->

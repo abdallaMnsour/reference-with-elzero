@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dom deal</title>
+  </head>
+  <body>
+    <div id="div">
+      <span>[and this is span]</span>
+    </div>
+
+    <script>
+      /*
+        اضف قبل او بعد او في العنصر
+          before() [element || string]
+          after() [element || string]
+          append() [element || string] بيضيف العنصر في الاخر
+          prepend() [element || string] بيضيف العنصر في الاول
+        احذف العنصر
+          remove()
+      */
+
+      let div = document.querySelector("#div");
+
+      // add before or after the div
+      div.before("before div")
+      div.after("after div")
+
+      // add in the div from the first or the end
+      div.append("this is append")
+      div.prepend("this is prepend")
+
+      // remove the element
+      div.remove()
+    </script>
+  </body>
+</html>

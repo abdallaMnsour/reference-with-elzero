@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // structuring
+      const obj = {
+        name: "abdalla",
+        age: 22,
+        skills: {
+          html: "html",
+          css: "css"
+        },
+      };
+
+      // الترتيب مش مهم المهم ان الاسم يكون متشابه
+      // let { name, skills, age } = obj;
+      
+      // لو عايز تغير الاسم
+      // ({ name: testName, skills : {html: h, css: c}, age: testAge } = obj);
+
+      // const { name: testName, skills: {html: h, css: c}, age: testAge } = obj;
+
+      ({html: h, css: c} = obj.skills)
+
+      // console.log(name);
+      // console.log(skills);
+      // console.log(age);
+
+      // console.log(testName);
+      console.log(h);
+      // console.log(testAge);
+    </script>
+  </body>
+</html>

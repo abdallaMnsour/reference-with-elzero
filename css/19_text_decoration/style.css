@@ -1,0 +1,19 @@
+.div1 {
+    text-decoration: overline;
+}
+.div2 {
+    text-decoration: line-through;
+}
+.div3 {
+    text-decoration: underline;
+}
+
+.div4 {
+
+    /* اول حرف كابيتال */
+    text-transform: capitalize;
+
+    text-transform: lowercase;
+    
+    text-transform: uppercase;
+}

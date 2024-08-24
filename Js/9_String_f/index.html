@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      String Methods
+        indexOf(Value [Mand], Start [Opt] 0)
+        lastIndexOf(Value [mand], Start [opt] Length)
+        slice(Start [Mand], End [Opt] Not Include End)
+        repeat(Times) [ES6]
+        split(Separator [opt], Limit [Opt])
+    */
+
+      let name = "Abdalla mohamed mansour";
+
+      console.log(name.indexOf("mohamed"));
+      console.log(name.indexOf("o", 10)); // العاشر index ابدا البحث من عند ال
+      console.log(name.lastIndexOf("o", 5)); // لا تأخذ قيم سالبه
+      console.log(name.slice(0, 15));
+      console.log(name.repeat(2));
+      console.log(name.split(" ", 2));
+    </script>
+  </body>
+</html>
+<!-- 2 : 50: 02 -->

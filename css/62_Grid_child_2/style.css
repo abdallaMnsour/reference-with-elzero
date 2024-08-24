@@ -1,0 +1,25 @@
+.parent {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #aaa;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.parent div {
+  background-color: #fa0;
+  border-radius: 10px;
+  padding: 10px;
+}
+.parent div {
+  background-color: #fa0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.eight {
+  background-color: #129be0 !important;
+  grid-area: 2 / 2 / 9 / 5;
+}

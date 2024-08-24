@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        String
+          substring();
+          substr();
+          startswith();
+          endswith();
+      */
+
+      let name = "Abdalla mohamed mansour";
+
+      // اذا اخذت قيمه سالبه تبدا من الصفر slice() الفرق بينها و بين ال
+      console.log(name.substring(-10, 7));
+      console.log(name.substring(7, -10)); // اذا اخطأت في مكان القيم يقوم بتصحيحها
+      console.log(name.substring(name.length - 7, name.length - 1)); // طريقه معرفه آخر عنصر
+
+      console.log(name.substr(8, 7)); // length و ينتهي ب index يبدا ب
+
+      console.log(name.startsWith("Abd")); // true
+      console.log(name.startsWith("mo", 8)); // true
+
+      console.log(name.endsWith("ur")); // true
+      console.log(name.endsWith("ed", 15)); // true
+    </script>
+  </body>
+</html>

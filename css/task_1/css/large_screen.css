@@ -1,0 +1,37 @@
+/* large screen */
+@media (min-width: 842px) and (max-width: 1200px)
+{
+  aside {display: none !important}
+
+  /* main */
+  .main .text-about {
+      width: 100%;
+  }
+
+  .main .external-box {
+      width: 200px;
+      font-size: 12px;
+  }
+
+  .main .external-box button {
+      margin-top: 5px;
+  }
+
+  /* asks */
+  .answers .answer-image {top: -180px}
+
+  .answers .answer-image img {width: 95%;}
+
+  .answers .external-box {
+      width: 219px;
+      left: 5px;
+      bottom: -100px;
+  }
+
+  .answers .external-box button {margin-top: 10px;}
+
+  /* footer */
+  section.join-us header h2 {
+      font-size: 30px;
+  }
+}

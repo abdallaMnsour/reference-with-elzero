@@ -1,0 +1,16 @@
+div {
+  width: 80%;
+  padding: 30px;
+  margin-top: 20px;
+  font-size: 40px;
+  margin: auto;
+  background-color: #ddd;
+
+  /* ==================== */
+  -webkit-box-shadow: inset 6px 6px 7px 3px #aaa;
+  -moz-box-shadow: inset 6px 6px 7px 3px #aaa;
+  -ms-box-shadow: inset 6px 6px 7px 3px #aaa;
+  -o-box-shadow: inset 6px 6px 7px 3px #aaa;
+  box-shadow: inset 6px 6px 7px 3px #aaa;
+  /* ==================== */
+}

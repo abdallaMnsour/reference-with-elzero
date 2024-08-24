@@ -1,0 +1,26 @@
+.parent {
+  background-color: red;
+  padding: 10px;
+  /* ده حل */
+  overflow: hidden;
+}
+.parent div {
+  background-color: #ddd;
+  width: 25%;
+  float: left;
+  /* position: relative; */
+}
+
+/* ده حل */
+/* .clear {
+  clear: both;
+} */
+
+.parent div.test::before {
+  content: "";
+  width: 20px;
+  height: 200px;
+  background-color: blue;
+  position: absolute;
+  left: 0;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>this is my paragraph</p>
+    <script>
+      /*
+        addEventListener
+          علي عنصر واحد event العاديه انها تقدر تعمل اكتر من event الفرق بينها وبين ال
+          و لو فيه خطأ في تنفيذها بينبهك
+      */
+
+      let myP = document.querySelector("p");
+
+      // الفرق الاول انها بتنفذ الاخير
+      myP.onclick = one;
+      myP.onclick = two;
+
+      // بتنفذ الاثين
+      myP.addEventListener("click", one);
+      myP.addEventListener("click", two);
+
+      function one() {
+        console.log("one 1");
+      }
+      function two() {
+        console.log("two 2");
+      }
+
+      // error الفرق الثاني انه مش هيطلع
+      myP.onclick = "string"
+      // error هيطلع
+      myP.addEventListener("click", "string")
+    </script>
+  </body>
+</html>

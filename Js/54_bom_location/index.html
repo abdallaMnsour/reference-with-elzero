@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="reload">reload</button>
+    <button id="google">google</button>
+
+    <div id="div1" style="margin-bottom: 1000px">div 1</div>
+    <div id="div2" style="margin-bottom: 1000px">div 2</div>
+    <a href="#div2">click</a>
+    <script>
+      let reloadBtn = document.getElementById("reload");
+      let googleBtn = document.getElementById("google");
+      /*
+        location Object
+          href => get / set [URL, hash, file, mail]
+          host => host + port
+          hostname => host
+          hash => #str
+          protocol => https => "hyper text transfer protocol secured layer"
+          reload()
+          replace() يقوم بتبديل الدومين ولا يمكنك العوده الي الدومين السابق
+          assign() مثل الريبليس لكن يمكن العوده الي الدومين السابق
+          pathname => مسار الموقع
+      */
+
+      console.log(location.href); // المسار بالكامل
+      console.log(location.host); // 127.0.0.1:5500
+      console.log(location.hostname); // 127.0.0.1
+      console.log(location.protocol); // http:
+      console.log(location.pathname); // /مراجع/Js/54_bom_location/index.html
+      location.hash = "div2"; // go to div2
+
+      reloadBtn.onclick = function () {
+        location.reload(); // make reload
+      };
+
+      googleBtn.onclick = function () {
+        console.log(location.replace("https://google.com")); // no go back no history
+      };
+      // location.href = "/#div2"; مش شغاله
+    </script>
+  </body>
+</html>
+<!-- 00 : 28 : 00 -->

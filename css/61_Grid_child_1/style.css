@@ -1,0 +1,30 @@
+.parent {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #aaa;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.parent div {
+  background-color: #fa0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.one {
+  /* ================== */
+  grid-column: 1 / 4;
+}
+
+.eight {
+  grid-column: 5 / 6;
+  grid-row: 1 / 4;
+}
+
+.thirteen {
+  grid-column: 2 / 4;
+  grid-row: 3 / 6;
+}

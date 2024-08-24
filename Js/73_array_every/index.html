@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      true لو لقت كل القيم صح بترجع
+      false لو لقت قيمه واحده خطأ بترجع
+      array.every(function(value, index, array), this) => boolean
+    */
+    const locationTest = {
+      20: "location 1",
+      30: "location 2",
+      10: "location 3",
+      40: "location 4"
+    };
+
+    let number = 15;
+
+    let array = Object.keys(locationTest)
+
+    let final = array.every(function(e) {
+      return +e > this;
+    }, number)
+
+    console.log(array);
+    console.log(final);
+  </script>
+</body>
+</html>

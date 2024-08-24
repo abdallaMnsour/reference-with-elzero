@@ -1,0 +1,126 @@
+/*
+    you must have this element
+      <div class="typing-club-reload">
+          <div class="typing-club-box"></div>
+          <div class="typing-club-reload-shadow"></div>
+      </div>
+*/
+
+.typing-club-reload {
+    position: relative;
+    width: 100px;
+    display: inline-block;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.typing-club-box {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #2196f3;
+    animation: typing-reload 2s infinite cubic-bezier(0, 0, 0, 0);
+    transform: rotate(45deg);
+    position: relative;
+}
+
+.typing-club-reload-shadow {
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 44px;
+    left: 26px;
+    border-radius: 50%;
+    height: 5px;
+    background: #00000021;
+    animation: typing-shadow 2s infinite cubic-bezier(0, 0, 0, 0);
+}
+
+@keyframes typing-reload {
+    0%   {
+        border-radius: 5px 5px 40px 5px;
+        top: 0;
+    }
+
+    9.5% {
+        border-radius: 3px;
+        top: -20px;
+    }
+    15.5% {
+        border-radius: 3px;
+        top: -20px;
+    }
+
+    25%  {
+        border-radius: 5px 40px 5px 5px;
+        top: 0;
+    }
+
+    34.5% {
+        border-radius: 3px;
+        top: -20px;
+    }
+    40.5% {
+        border-radius: 3px;
+        top: -20px;
+    }
+
+    50%  {
+        border-radius: 40px 5px 5px 5px;
+        top: 0;
+    }
+
+    58.5% {
+        border-radius: 3px;
+        top: -20px;
+    }
+    66.5% {
+        border-radius: 3px;
+        top: -20px;
+    }
+
+    75%  {
+        border-radius: 5px 5px 5px 40px;
+        top: 0;
+    }
+
+    84.5% {
+        border-radius: 3px;
+        top: -20px;
+    }
+    90.5% {
+        border-radius: 3px;
+        top: -20px;
+    }
+
+    100% {
+        top: 0;
+        transform: rotate(405deg);
+        border-radius: 5px 5px 40px 5px;
+    }
+}
+
+@keyframes typing-shadow {
+    0%   {width: 60px;}
+
+    9.5% {width: 55px;}
+    15.5% {width: 55px;}
+
+    25%  {width: 60px;}
+
+    34.5% {width: 55px;}
+    40.5% {width: 55px;}
+
+    50%  {width: 60px;}
+
+    58.5% {width: 55px;}
+    66.5% {width: 55px;}
+
+    75%  {width: 60px;}
+
+    84.5% {width: 55px;}
+    90.5% {width: 55px;}
+
+    100% {width: 60px;}
+}

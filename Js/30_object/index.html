@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <script>
+      let testObject = {
+        name: "abdalla",
+        age: 22,
+
+        "test name": "name is abdalla",
+
+        sayHallow: function (name = "user") {
+          return `hello ${name}`;
+        },
+
+        retObject: function () {
+          let objectTest = {
+            name: "tasnim",
+            age: 19,
+          };
+          return objectTest;
+        },
+      };
+      let name = "test name";
+      console.log(testObject.retObject().age);
+      // اذا كان الاسم غير صالح تضعه بهذا الشكل
+      console.log(testObject["test name"]);
+      // لكن يجب وضعه ايضا داخل المربع object يمكن عمل متغير باسم عنصر داخل ال
+      console.log(testObject[name]);
+    </script>
+  </body>
+</html>
+<!-- 08 : 00 : 00 -->

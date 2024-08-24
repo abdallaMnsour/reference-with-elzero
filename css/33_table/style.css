@@ -1,0 +1,39 @@
+table {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #effffd;
+  
+  /* ==================== */
+  /* جعل البوردر نحيف */
+  border-collapse: collapse;
+  /* المسافات بين البوردر */
+  border-spacing: 0px;
+  /* ==================== */
+
+}
+
+table tr {
+  transition: .04s;
+}
+
+table td {
+  padding: 15px 10px;
+  border: 1px solid #ddd;
+}
+
+table thead td {
+  background-color: #009688;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  border-color: #038477;
+}
+
+table tbody tr:nth-child(even) {
+  /* you have EVEN and ODD */
+  background-color: #e6f7f4;
+}
+
+table tbody tr:hover {
+  background-color: #ceedea;
+}

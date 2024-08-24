@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let chosen = 3;
+
+    let myFriends  = [
+      { title: "Osama", age: 39, available: true, skills: ["html", "css"]},
+      { title: "Ahmed", age: 25, available: false, skills: ["python", "Django"]},
+      { title: "Sayed", age: 33, available: true, skills: ["php", "Laravel"]}
+    ];
+
+    if (chosen === 1) {
+      let [friend] = myFriends;
+      ({title, age, available, skills: [, skill]} = friend)
+      document.write(`hello ${title} <br>`)
+      document.write(`you'r age is ${age} <br>`)
+      document.write(`you'r are ${available ? "Available" : "not Available"} <br>`)
+      document.write(`you'r skill is ${skill} <br>`)
+    }
+    else if (chosen === 2) {
+      let [, friend] = myFriends;
+      ({title, age, available, skills: [, skill]} = friend)
+      document.write(`hello ${title} <br>`)
+      document.write(`you'r age is ${age} <br>`)
+      document.write(`you'r are ${available ? "Available" : "not Available"} <br>`)
+      document.write(`you'r skill is ${skill} <br>`)
+    }
+    else if (chosen === 3) {
+      let [, , friend] = myFriends;
+      ({title, age, available, skills: [, skill]} = friend)
+      document.write(`hello ${title} <br>`)
+      document.write(`you'r age is ${age} <br>`)
+      document.write(`you'r are ${available ? "Available" : "not Available"} <br>`)
+      document.write(`you'r skill is ${skill} <br>`)
+    }
+  </script>
+</body>
+</html>

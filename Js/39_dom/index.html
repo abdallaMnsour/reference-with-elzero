@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <!-- comment -->
+      <h3>hello from h3</h3>
+      <p>hello from p</p>
+    </div>
+
+    <script>
+      /*
+      children => بيرجع جميع العناصر بتوصلها بالاندكس
+      childNodes => بيرجع جميع الابناء حتي الكومنت بتوصلها بالاندكس
+      firstChild => بيرجع اول ابن
+      lastChild => بيرجع اخر ابن
+      firstElementChild => بيرجع اول عنصر
+      lastElementChild => بيرجع اخر عنصر
+    */
+
+      console.log(document.getElementsByTagName("div")[0].children[0]); // <h3>hello from h3</h3>
+      console.log(document.getElementsByTagName("div")[0].childNodes[0]); // <!-- comment -->
+      console.log(document.getElementsByTagName("div")[0].firstChild); // <!-- comment -->
+      console.log(document.getElementsByTagName("div")[0].lastChild); // #text عشان عامل انتر
+      console.log(document.getElementsByTagName("div")[0].firstElementChild); // <h3>hello from h3</h3>
+      console.log(document.getElementsByTagName("div")[0].lastElementChild); // <p>hello from p</p>
+    </script>
+  </body>
+</html>
+<!-- 09 : 10 : 00 -->

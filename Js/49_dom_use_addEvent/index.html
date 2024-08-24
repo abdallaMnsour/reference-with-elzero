@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="myP">this is my paragraph</p>
+
+    <script>
+      let myP = document.getElementById("myP");
+      
+      myP.addEventListener("click", function () {
+        let newP = myP.cloneNode(true);
+        newP.className = "clone";
+        document.body.appendChild(newP);
+      });
+      
+      // error العنصر لسه متنشأش عشان اضغط عليه
+      // let newClassP = document.getElementsByClassName("clone")[0];
+
+      // newClassP.onclick = function () {
+      //   console.log("clicked by copy paragraph");
+      // };
+
+      document.addEventListener("click", function (e) {
+        if (e.target.className === "clone") {
+          console.log("i am clone")
+        }
+      })
+      document.onclick =  function (e) {
+        if (e.target.className === "clone") {
+          console.log("i am clone")
+        }
+      }
+    </script>
+  </body>
+</html>

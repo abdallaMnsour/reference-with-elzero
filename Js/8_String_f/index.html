@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      String Methods
+        Access With Index
+        Access With charAt()
+        length
+        trim() ازاله المساحات الفارغه
+        toUpperCase()
+        toLowerCase()
+        Chain Methods
+    */
+
+      let userName = "  Abdalla  ";
+      console.log(userName);
+      console.log(userName[2]); // undefined انها لو مش موجوده بترجع charAt الفرق بينها و بين ال
+      console.log(userName.charAt(2)); // لو مش موجوده مش بترجع حاجه
+      console.log(userName.length);
+      console.log(userName.trim());
+      console.log(userName.toUpperCase());
+      console.log(userName.toLowerCase());
+
+      console.log(userName.trim()[2].toUpperCase());
+    </script>
+  </body>
+</html>

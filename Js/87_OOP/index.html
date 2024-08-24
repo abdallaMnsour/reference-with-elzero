@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      /*
+        الوراثه
+        extends
+        super
+      */
+
+      class User {
+        constructor(id, username) {
+          this.i = id + 30; // id + 30 بوراثه ال Admin يقوم ال
+          this.u = username;
+        }
+        sayHello() {
+          return "hello user";
+        }
+      }
+
+      class Admin extends User {
+        constructor(id, username, permissions) {
+          super(id, username);
+          this.p = permissions;
+        }
+      }
+
+      let userOne = new User(100, "abdalla");
+      let adminOne = new Admin(100, "abdalla", 1);
+
+      console.log(userOne.i);
+      console.log(adminOne.i);
+      console.log(adminOne.sayHello());
+    </script>
+  </body>
+</html>

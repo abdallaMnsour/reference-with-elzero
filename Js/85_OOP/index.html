@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      1 => غير الاسم
+      2 => constructor اعرف معلومات عن ال
+    */
+    class User {
+      constructor(id, username, salary) {
+        this.i = id;
+        this.n = username;
+        this.s = salary;
+      }
+      changeName(newName) {
+        this.n = newName;
+      }
+    }
+
+    let nameOne = new User(100, "abdalla", 5000);
+
+    console.log(nameOne.n);
+    nameOne.changeName("osama");
+    console.log(nameOne.n);
+
+    let stringOne = "string";
+    let stringTwo = new String("string");
+    
+    console.log(typeof stringOne); // string
+    console.log(typeof stringTwo); // object
+
+    console.log(stringOne instanceof String); // false
+    console.log(stringTwo instanceof String); // true
+
+    console.log(stringOne.constructor === String); // true
+    console.log(stringTwo.constructor === String); // true
+
+    // ======================
+
+    let numOne = 100;
+    let numTwo = new Number(100);
+    
+    console.log(typeof numOne); // number
+    console.log(typeof numTwo); // object
+
+    console.log(numOne instanceof Number); // false
+    console.log(numTwo instanceof Number); // true
+
+    console.log(numOne.constructor === Number); // true
+    console.log(numTwo.constructor === Number); // true
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.flex {
+  display: flex;
+  background-color: #ddd;
+  padding: 10px;
+  margin-top: 10px;
+  height: 300px;
+  width: 300px;
+  align-items: flex-start;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flex div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b86c5;
+  color: white;
+  border-radius: 4px;
+  width: 60px;
+  margin: 1px;
+  padding: 10px;
+}
+
+.three {
+  /* ============================ */
+  align-self: flex-end;
+  /* ============================ */
+}
+
+span.in {display: inline-block;}

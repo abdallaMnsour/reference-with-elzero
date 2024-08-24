@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        property
+          size
+
+        methods
+          set()
+          get()
+          delete()
+          has()
+          clear()
+      */
+      /*
+        Syntax: new Map(iterable with key/value)
+          map vs object
+
+            map => does not contain key by default ليس لها قيمه افتراضيه
+            object => has default keys
+
+            map => key can be anything [function, object, any primitive data types] تقبل اي نوع بيانات
+            object => string or symbol
+
+            map => ordered by insertion الترتيب الصحيح
+            object => not 100% till now
+
+            map => get items by size عدد العناصر
+            object => need to do manually
+
+            map => better performance when add or remove data اسرع في الحذف او الاضافه
+            object => low performance when comparing to map
+      */
+
+      let myObject = {}; // بها قيمه افتراضيه
+      let myEmptyObject = Object.create(null); // ليس بها قيمه افتراضيه
+      let myMap = new Map(); // ليس بها قيمه افتراضيه
+
+      console.log(myObject); // [[Prototype]]: Object
+      console.log(myEmptyObject); // No properties
+      console.log(myMap); // No properties
+
+      console.log("==================");
+
+      let newObject = {
+        10: "number",
+        "10": "string", // طغي عليه
+      };
+
+      console.log(newObject[10]);
+
+      let newMap = new Map([
+        ["name", "abdalla"],
+        [false, 22]
+      ])
+      newMap.set(10, "number")
+      newMap.set('10', "string")
+      newMap.set(true, "boolean")
+      newMap.set({name: "abdalla",age: 22}, "object")
+      newMap.set(function doSomething() {}, "function")
+
+      console.log(newMap.get(10)); // number
+      console.log(newMap.get("10")); // string
+
+      console.log(newMap)
+      console.log(newMap.size)
+    </script>
+  </body>
+</html>

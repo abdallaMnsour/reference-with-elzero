@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        height: 1000px;
+        width: 100px;
+        margin: auto;
+        text-align: center;
+      }
+      div {
+        color: white;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 5px;
+        background-color: #f0a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">one</div>
+    <div class="two">two</div>
+    <div class="three">three</div>
+    <div class="four">four</div>
+    <script>
+      /*
+        style
+        cssText
+        removeProperty(propertyName) [inline, stylesheet] لايمكن ازاله الخاصيه اذا لم تكن علي العنصر
+        setProperty(propertyName, value, priority) Css يضيف الخاصيه علي العنصر و ليس ملف ال
+        document.styleSheets[index].rules[index].style.??? الرئيسي Css قم بالتحكم بملف ال
+      */
+
+      let one = document.querySelector(".one"),
+        two = document.querySelector(".two"),
+        three = document.querySelector(".three"),
+        four = document.querySelector(".four");
+
+      one.style.backgroundColor = "#fa0";
+
+      two.style.cssText = "padding: 20px; border-radius: 10px;background: #0af";
+
+      three.style.setProperty("color", "#fa0", "important");
+
+      three.style.removeProperty("color")
+
+      //  الرئيسي Css قم بالتحكم بملف ال
+      document.styleSheets[0].rules[0].style.removeProperty("height");
+      document.styleSheets[0].rules[0].style.setProperty("width", "auto", "important")
+      document.styleSheets[0].rules[0].style.backgroundColor = "green";
+    </script>
+  </body>
+</html>

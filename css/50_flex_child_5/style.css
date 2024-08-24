@@ -1,0 +1,48 @@
+.flex {
+  background-color: #ddd;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ============================ */
+.flex {
+  display: flex;
+}
+
+.flex div {
+  background-color: #1b86c5;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: default;
+  transition: 1s;
+
+  width: 200px;
+  margin: 1px;
+  flex-grow: 1;
+}
+
+.flex .child1 {order: 7;}
+.flex .child2 {order: 6;}
+.flex .child3 {order: 5;}
+.flex .child4 {order: 4;}
+.flex .child5 {order: 3;}
+.flex .child6 {order: 2;}
+.flex .child7 {order: 1;}
+.flex .child8 {order: 8;}
+
+.flex div:hover {
+  flex-shrink: 2 !important;
+}
+
+.grow div {width: 20px;transition: .5s;}
+
+.grow div:hover {
+  flex-grow: 5 !important;
+}
+/* ============================ */

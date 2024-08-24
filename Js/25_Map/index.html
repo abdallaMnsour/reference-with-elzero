@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // we want   2  4  6  8
+      let array = [1, 2, 3, 4];
+
+      let testMap = array.map(function (element, index, array) {
+        document.write(`Element = ${element} <br>`);
+        document.write(`Index = ${index} <br>`);
+        document.write(`Array = ${array} <br>`);
+        document.write(`This = ${this} <br>`);
+      }, 10);
+
+      let myMap = array.map((e) => e + e);
+
+      // let myMap = array.map(function (element, index, array) {
+      //   return element + element
+      // }, 10);
+
+      document.write(myMap);
+    </script>
+  </body>
+</html>

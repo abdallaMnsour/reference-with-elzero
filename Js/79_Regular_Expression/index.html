@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        $ => النص ينتهي ب
+        ^ => النص يبدا ب
+        ?= => الكلمه تنتهي ب
+        ?! => الكلمه لا تنتهي ب
+
+        replace()
+        replaceAll()
+      */
+
+      let hello = "hello tasnim my name is abdalla hellos";
+      let repStr = "i love @ but i still learn @";
+
+      console.log(/lla$/ig.test(hello));
+      console.log(/^hel/ig.test(hello));
+
+      // لا يقوم بطبع القيمه اللتي يبحث عنها
+      console.log(hello.match(/\w+(?=im)/ig)); // tasn
+      // s لا تقوم بطباعه الكلمه اللتي بعدها حرف ال
+      console.log(hello.match(/he\w+(?!s)/ig)); // hello, hellos
+      console.log(hello.match(/hello(?!s)/ig)); // hello
+
+      //////////////////////
+
+      let re = /@/;
+
+      console.log(repStr.replace(re, "JavaScript"));
+      // g هما الاثنين واحد عشان حاطط حرف ال
+      console.log(repStr.replace(/@/g, "JavaScript"));
+      console.log(repStr.replaceAll("@", "JavaScript"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,219 @@
+/* start global */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;217;230;300;400;500;600;700;800;900&display=swap');
+
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #222;
+    font-family: cairo, Arial, Helvetica, sans-serif;
+}
+
+.clear {
+    clear: both;
+}
+
+form { margin: 10px }
+
+input {
+    display: block;
+    margin-bottom: 15px;
+    padding: 6px 10px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+}
+
+input[type=submit], button {
+    cursor: pointer;
+}
+
+
+video {
+    padding: 3px;
+    display: block;
+    background-color: #aaa;
+    border-radius: 10px;
+}
+/* end global  */
+
+
+/* start header */
+.main {
+    background-color: #333;
+    color: #ddd;
+    padding: 20px;
+    text-align: center;
+}
+/* end header */
+
+
+/* start nav */
+nav {
+    background: #ddd;
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav ul li {
+    cursor: pointer;
+    display: inline-flex;
+    transition: .3s;
+    height: 60px;
+    align-items: center;
+    padding: 15px 10px;
+
+}
+
+nav ul li:hover {
+    background: #aaa;
+}
+/* end nav */
+
+
+/* start main */
+main {
+    padding: 10px;
+    background-color: #eee;
+    text-align: center;
+}
+
+main p span {
+    font-weight: 700;
+    color: #333;
+}
+/* End main */
+
+
+/* start article */
+.post {
+    float:left;
+    width: 70%;
+}
+
+article {
+    margin: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+article header {
+    border-radius: 7px 7px 0 0;
+    padding: 10px;
+    background-color: #ddd;
+}
+
+article section {
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    background-color: #fafafa;
+}
+
+article section .linkElzero {
+    width: 100px;
+}
+
+article section .figure-code code{
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border: #ccc solid 1px;
+    display: block;
+}
+
+article section .figure-img {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border: #ccc solid 1px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+article section dialog {
+    margin-left: 20px;
+    border: 1px solid #333;
+    background-color: #ffffd4;
+    border-radius: 90px;
+    padding: 5px;
+}
+
+article section .figure-img img {
+    margin: 10px;
+    padding: 3px;
+    width: 200px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+}
+
+article section .figure-img img:nth-child(3) {
+    cursor: pointer;
+}
+
+article section .figure-img figcaption {
+    text-align: center;
+}
+
+article section[class="fields"] fieldset{
+    border-radius: 10px;
+}
+
+article section.fields legend {
+    margin: 0 20px;
+}
+
+article section video {
+    width: 100%;
+}
+
+@media (min-width: 720px) {
+    article section video {
+        width: 40%;
+    }
+}
+
+
+/* end article */
+
+/* start sidebar */
+aside {
+    float: right;
+    width: 30%;
+}
+
+aside section {
+    background-color: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    margin: 20px 20px 20px 0;
+    padding: 20px;
+}
+
+aside section h3 {
+    border-radius: 10px;
+    background: #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+aside section .margin-aside {
+    margin: 3px 20px;
+    line-height: 1.8;
+}
+/* end sidebar */
+
+/* start footer */
+footer {
+    background: #333;
+    color: #ddd;
+    padding: 10px;
+    text-align: center;
+}
+/* end footer */

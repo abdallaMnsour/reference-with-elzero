@@ -1,0 +1,16 @@
+div {
+    background-color: red;
+    margin: 10px;
+    padding: 10px;
+
+    /* ================ */
+
+    /* اقصي عرض */
+    max-width: 400px;
+    
+    /* اقل عرض */
+    min-width: 400px;
+
+    /* عمل عرض علي حجم المحتوي */
+    width: fit-content;
+}
